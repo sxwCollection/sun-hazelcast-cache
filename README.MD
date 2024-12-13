@@ -24,7 +24,9 @@ by the embedded way the hazelcast service is distributed in applications and it 
 there are 3 options for hc service discovery: 1 TCP, 2 broadcast, 3 kubernetes  
 2.1 TCP: the app find the hc service on some TCP address (of a service member).  
 2.2 broadcast: send discovery message to all members  
-2.3 kubernetes: leave kubernetes service discovery to do the magic.
+2.3 kubernetes: leave kubernetes service discovery to do the magic,   
+deploy the hazelcastservice.yaml to your kubernetes cluster and see example config in   
+suny.example.hazelcast.config.HazelCastConfiguration#hazelcastLocalConfig comments   
 3. run this app and you will like this msg in console:  
 '''
 

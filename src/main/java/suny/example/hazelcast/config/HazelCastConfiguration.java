@@ -16,6 +16,9 @@ public class HazelCastConfiguration {
         joinConfig.getTcpIpConfig().setEnabled(true).addMember("localhost");
         joinConfig.getMulticastConfig().setEnabled(false);
         joinConfig.getKubernetesConfig().setEnabled(false);
+//        if you use kubernetes DNS, deploy hazelcastservice.yaml and with this
+//        joinConfig.getTcpIpConfig().setEnabled(false);
+//        joinConfig.getKubernetesConfig().setEnabled(true).setProperty("service-dns", "MY-SERVICE-DNS-NAME");
         return config;
     }
 
