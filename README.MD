@@ -21,12 +21,12 @@ to use hazelcast you need to:
 there are two ways to cluster/deploy hazelcast. A the embedded way or B the client/server way.  
 see https://docs.hazelcast.com/imdg/4.2/overview/topology  
 by the embedded way the hazelcast service is distributed in applications and it is the way in this demo.  
-there are 3 options for hc service discovery: 1 TCP, 2 broadcast, 3 kubernetes  
+there are 3 options for hc service discovery: 1 TCP, 2 multicast, 3 kubernetes  
 2.1 TCP: the app find the hc service on some TCP address (of a service member).  
-2.2 broadcast: send discovery message to all members  
-2.3 kubernetes: leave kubernetes service discovery to do the magic. in this demo hc cluster/kubernetes service   
-deploy the hazelcastservice.yaml to your kubernetes cluster and see example config in   
-suny.example.hazelcast.config.HazelCastConfiguration#hazelcastLocalConfig comments   
+2.2 Multicast: broadcast-send discovery message to all members on predefined gourp:port 
+2.3 kubernetes: leave kubernetes service discovery to do the magic. in this demo configured for hc cluster/kubernetes service.   
+deploy the hazelcastservice.yaml to your kubernetes cluster   
+  and see example config in suny.example.hazelcast.config.HazelCastConfiguration#hazelcastLocalConfig comments   
    https://docs.hazelcast.com/hazelcast/5.5/kubernetes/kubernetes-auto-discovery   
 3. run this app and you will like this msg in console:  
 '''
