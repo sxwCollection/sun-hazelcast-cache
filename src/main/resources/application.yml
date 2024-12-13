@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: caching
+
+server:
+  port: 8899
