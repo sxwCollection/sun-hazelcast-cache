@@ -16,7 +16,7 @@ to use hazelcast you need to:
    		<artifactId>hazelcast</artifactId>
    		<version>${hazelcast.version}</version>
    	</dependency>
-'''
+'''   
 2. config, see suny.example.hazelcast.config.HazelCastConfiguration#hazelcastLocalConfig  
 there are two ways to cluster/deploy hazelcast. A the embedded way or B the client/server way.  
 see https://docs.hazelcast.com/imdg/4.2/overview/topology  
